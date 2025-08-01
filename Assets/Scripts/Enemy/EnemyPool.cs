@@ -75,8 +75,8 @@ public class EnemyPool : MonoBehaviour
 
     private EnemyType GetTypeFromPrefab(Enemy enemy)
     {
-        if (enemy.name.Contains("Ghost")) return EnemyType.Ghost; //Cube
-        if (enemy.name.Contains("Large")) return EnemyType.Large;  // Sphere
-        return EnemyType.Alien; //Capsule
+        if (enemy.name.Contains("Ghost")) return EnemyType.Ghost; 
+        if (enemy.name.Contains("Large")) return EnemyType.Large;  
+        return EnemyType.Alien; 
     }
 }

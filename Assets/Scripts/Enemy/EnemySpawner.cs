@@ -5,10 +5,10 @@ public class EnemySpawner : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private EnemyPool enemyPool;
-    [SerializeField] private List<Transform> spawnPoints; // Assign in Inspector
+    [SerializeField] private List<Transform> spawnPoints; // Assigned in Inspector
 
     [Header("Spawn Offset")]
-    [SerializeField] private float offsetRange = 10.0f; // tweak in Inspector
+    [SerializeField] private float offsetRange = 10.0f; 
 
     // Spawn a single enemy of given type at random spawn point
     public Enemy SpawnEnemy(EnemyType type)
@@ -32,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
         return SpawnEnemy(randomType);
     }
 
-    // Spawn multiple enemies (used by WaveManager later)
+    // Spawn multiple enemies
     public void SpawnEnemies(int count)
     {
         for (int i = 0; i < count; i++)

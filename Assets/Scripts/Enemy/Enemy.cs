@@ -113,11 +113,7 @@ public class Enemy : MonoBehaviour
 
     private void ChangeState(EnemyState newState)
     {
-        // Exit logic for current state
-        if (currentState == EnemyState.Attack)
-        {
-            // Stop attack animations if needed
-        }
+       
 
         currentState = newState;
 

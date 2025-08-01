@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject); // Optional if you want it persistent
+        DontDestroyOnLoad(gameObject); 
     }
 
     public void RestartGame()

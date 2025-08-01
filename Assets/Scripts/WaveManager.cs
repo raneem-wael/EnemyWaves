@@ -106,28 +106,7 @@ public class WaveManager : MonoBehaviour
         }
     }
 
-    //public void SkipWave()
-    //{
-    //    Debug.Log("Wave skipped!");
-
-    //    // Stop any pending next wave coroutine
-    //    if (nextWaveCoroutine != null)
-    //    {
-    //        StopCoroutine(nextWaveCoroutine);
-    //        nextWaveCoroutine = null;
-    //    }
-
-    //    // Kill all active enemies & reset counter
-    //    KillAllEnemies();
-    //    aliveEnemies = 0;
-
-    //    // Update UI enemy count
-    //    if (UIManager.Instance != null)
-    //        UIManager.Instance.UpdateEnemies(aliveEnemies);
-
-    //    // Start next wave immediately
-    //    StartNextWave();
-    //}
+    
 
     public void SkipWave()
     {
@@ -164,7 +143,7 @@ public class WaveManager : MonoBehaviour
     public void KillAllEnemies()
     {
         Debug.Log("Killing all enemies");
-        foreach (Enemy enemy in FindObjectsOfType<Enemy>())
+        foreach (Enemy enemy in Object.FindObjectsByType<Enemy>(FindObjectsSortMode.None))
         {
             enemy.TakeDamage(9999);
         }
